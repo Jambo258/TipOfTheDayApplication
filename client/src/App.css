@@ -1,0 +1,115 @@
+.App {
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: fit-content;
+}
+
+#dark {
+  background-color: black;
+}
+
+#dark h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+li,
+ol,
+p,
+ul {
+  color: #f0f0f0;
+}
+
+#light .MuiMenu-paper {
+  background: #1976d2;
+}
+#dark .MuiTablePagination-selectLabel {
+  color: #f0f0f0;
+}
+
+#dark .MuiTablePagination-displayedRows {
+  color: #f0f0f0;
+}
+
+#dark .MuiSvgIcon-root {
+  color: #f0f0f0;
+}
+
+#light h2,
+p,
+h5,
+h3,
+h1,
+a,
+#light li {
+  color: #000000;
+}
+
+code {
+  border-radius: 5px;
+  background-color: #2d2d2d;
+  padding: 3px 4px;
+  color: #e0e0e0;
+}
+
+pre {
+  padding: 5px;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  width: fit-content;
+}
+
+.searchIcon {
+  margin-bottom: 16px;
+}
+
+#dark .searchIcon {
+  color: #e0e0e0;
+}
+.searchIcon:hover {
+  background-color: #e0e0e021;
+  border-radius: 8px;
+}
+
+#dark .buttons {
+  background-color: #bb86fc;
+}
+
+#dark .buttonsOutline {
+  border-color: #bb86fc;
+  color: #bb86fc;
+}
+
+#dark textarea,
+#dark #description-label,
+#dark label {
+  color: #ececec;
+}
+
+#dark input {
+  color: #ececec;
+  background-color: #262626;
+}
+
+#light input {
+  color: black;
+  background-color: white;
+}
+
+.background {
+  min-height: 100vh;
+  padding-top: 20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+#light .background {
+  background-image: url("./pages/images/white.jpg");
+}
+
+#dark .background {
+  background-image: url("./pages/images/dark.jpg");
+}

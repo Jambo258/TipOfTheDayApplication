@@ -1,0 +1,79 @@
+###
+GET http://localhost:3000/api/users/getusers
+
+###
+GET http://localhost:3000/api/tips/getall
+
+###
+GET http://localhost:3000/api/tips/getall/10
+
+###
+GET http://localhost:3000/api/users/getusers
+
+###
+GET http://localhost:3000/getall
+###
+GET http://localhost:3000/getall
+###
+PATCH http://localhost:3000/api/tips/1/likeplus
+Authorization: BEARER {{authToken}}
+###
+PATCH http://localhost:3000/api/tips/1/likeminus
+Authorization: BEARER {{authToken}}
+###
+GET http://localhost:3000/api/tips/getall/
+
+###
+GET http://localhost:3000/api/tips/getbycreator/123456789
+
+###
+GET http://localhost:3000/api/tips/randomtip
+
+###
+POST http://localhost:3000/api/tips/addtip
+Content-Type: application/json
+Authorization: BEARER {{authToken}}
+
+{
+  "description": "Test tip description",
+  "category": 6,
+  "creator": "123456789"
+} 
+
+###
+PATCH http://localhost:3000/api/tips/17/update
+Content-Type: application/json
+Authorization: BEARER {{authToken}}
+
+{
+  "description": "NEW TIP",
+  "category": 5
+} 
+
+### 
+DELETE http://localhost:3000/api/tips/17/delete
+Authorization: BEARER {{authToken}}
+
+###
+POST http://localhost:3000/api/users/signup
+Content-Type: application/json
+
+{
+  "username": "John Wayne",
+  "email": "john@wayne.com",
+  "password": "john@wayne"
+}
+
+###
+# @name login
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "email": "john@wayne.com",
+  "password": "john@wayne"
+}
+
+
+###
+@authToken = {{login.response.body.token}}

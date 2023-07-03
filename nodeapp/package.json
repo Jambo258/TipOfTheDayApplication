@@ -1,0 +1,42 @@
+{
+  "name": "expresstotd",
+  "jest": {
+    "verbose": true,
+    "testTimeout": 15000
+  },
+  "version": "1.0.0",
+  "description": "TotD with node ExpressJs",
+  "type": "module",
+  "main": "app.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:jest": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules npx jest --forceExit",
+    "test:coverage": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules npx jest --forceExit --coverage",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed:db": "cd scripts && node add_data_to_db.js && node add_admin_to_db.js"
+  },
+  "author": "Petteri J",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.15.0",
+    "joi": "^17.9.2",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.10.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.3.3"
+  }
+}
